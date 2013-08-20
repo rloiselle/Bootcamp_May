@@ -1,4 +1,5 @@
-Bootcamp_May
-============
+rebecca.loiselle.github.io
+=========================
 
-PCS HTML/CSS bootcamp
+portfolio for projects
+
