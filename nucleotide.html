@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rebecca.loiselle@github by rloiselle</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Nucleotide.rb</h1>
+        <p class="center2"><b>Goal:</b> Write a class DNA that takes a DNA string. It should have two ways of telling us how many times each nucleotide occurs in the string: #count(nucleotide) and #nucleotide_count.
+        </p>
+        <p class = "center2">
+          <a href="http://jumpstartlab.com/news/archives/2013/05/24/a-warm-up-a-day">A Daily Warm-Up by JumpStart</a>
+          <br>
+          <a href="https://github.com/JumpstartLab/warmup-exercises">The full list of exercises on github</a>
+        </p>
+      </header>
+
+      <section>
+        <h3>
+          <a name="about-me" class="anchor" href="#about-me"><span class="octicon octicon-link"></span></a>My Process</h3>
+        <pre class="prettyprint">
+          <code>
+            class DNA
+
+            # attr_accessor :nucleotideHash
+
+            def initialize(string)
+              @dna = string
+            end
+
+            def count(nucleotide)
+              count = @dna.count(nucleotide)
+              # if (count == 0)
+              #   print nucleotide + " is not a nucleotide."
+              # else (print count)
+              # end
+            end
+
+            def nucleotide_counts
+              dnaHash = {'A'=>nil, 'C'=>nil, 'G'=>nil, 'T'=>nil}
+              dnaHash.each_key {|key|
+                dnaHash[key]= @dna.count(key)
+              }
+              p dnaHash
+            end
+
+            # Figure out how to raise error when non-nucleotide letter entered
+                #http://phrogz.net/programmingruby/tut_exceptions.html
+
+            # def validateNucleotide(nucleotide)
+            #   unless nucleotide == "A" || nucleotide == "G" || nucleotide == "T" || nucleotide == "C"
+            #     # dnaIs =["A", "G", "T", "C"]
+            #   # print(dnaIs.include?(nucleotide))
+            #   print dnaIs.index(nucleotide)
+            # end
+
+          end
+
+          dna = DNA.new("ATGCTTCAGAAAGGTCTTACG")
+          dna.count("A")
+          dna.nucleotide_counts
+          # dna.validateNucleotide("S")
+          </code>
+        </pre>
+
+        <p></p>
+
+        <p></p>
+
+      </section>
+
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rloiselle">rloiselle</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+
+    </div>
+
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  </body>
+</html>
+
+
+
