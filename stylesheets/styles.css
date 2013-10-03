@@ -264,10 +264,17 @@ width:70%;
 {
 margin-left:auto;
 margin-right:auto;
+margin-bottom: 0px;
 width:90%;
 }
 
 .md_link {
 
+}
+
+.quoted {
+  text-align: right;
+  margin-top: 0px;
+  margin-right: 15px;
 }
 
